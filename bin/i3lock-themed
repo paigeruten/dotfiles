@@ -4,7 +4,7 @@
 # which lets you theme the little circle-ma-bob that has such ugly colours by
 # default. (I don't know if I did much better...)
 
-i3lock -i $HOME/images/backgrounds/current.png -t \
+i3lock -i ~/images/backgrounds/current.png -t \
          --insidevercolor=002b365f \
        --insidewrongcolor=002b365f \
             --insidecolor=002b365f \
