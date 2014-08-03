@@ -1,0 +1,79 @@
+#!/bin/sh
+
+# Usage: sudo backup /dev/sdXN
+#   where /dev/sdXN is the backup storage device, i.e. the destination device.
+#
+# I don't like automatic backups. I prefer to plug in the backup storage device,
+# run a command to do the backup, then unplug it till next time. So this script
+# is that command. It mounts the storage device, runs `rsync`, calls `sync` and
+# unmounts the storage device.
+
+# The directory on which to mount the backup storage device.
+MOUNT_DIR=/mnt
+
+# The destination directory on the backup storage device.
+BACKUP_DIR=/backup/slupchik
+
+# Need root to copy all files.
+if [ $USER != "root" ]
+then
+  echo "Error: must be root."
+  exit 1
+fi
+
+# Make sure a backup storage device is given.
+if [ ! -b "$1" ]
+then
+  echo "Error: please provide a valid backup storage device as an argument."
+  exit 2
+fi
+
+# Make sure $MOUNT_DIR isn't in use.
+if mount | grep "$MOUNT_DIR" > /dev/null
+then
+  echo "Error: ${MOUNT_DIR} is already mounted."
+  exit 3
+fi
+
+# Mount the backup storage device.
+echo "Mounting backup storage device..."
+if ! mount "$1" "$MOUNT_DIR"
+then
+  echo "Error: couldn't mount ${MOUNT_DIR} on ${1}."
+  exit 4
+fi
+
+# Make sure the destination directory exists.
+if [ ! -d "${MOUNT_DIR}/${BACKUP_DIR}" ]
+then
+  echo "Error: backup directory ${BACKUP_DIR} doesn't exist."
+  exit 5
+fi
+
+# Do the backup.
+echo "Starting rsync..."
+rsync -aAXv --delete /* "${MOUNT_DIR}/${BACKUP_DIR}" --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*",/lost+found}
+
+# Check if rsync exited with an error.
+if [ $? != 0 ]
+then
+  echo "Error: rsync didn't return with a zero exit code. Leaving storage device mounted."
+  exit 6
+fi
+
+# Sync and unmount the storage device.
+echo "Syncing filesystems..."
+sync
+echo "Unmounting backup storage device..."
+umount "$MOUNT_DIR"
+
+# Final status message.
+if [ $? == 0 ]
+then
+  echo "Backup completed successfully. You can unplug the storage device."
+  exit 0
+else
+  echo "Backup completed successfully, but there was a problem unmounting the storage device."
+  exit 7
+fi
+
