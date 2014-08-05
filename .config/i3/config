@@ -24,6 +24,9 @@ bindsym $mod+period exec pcmanfm
 # Lock screen (using themed version of `i3lock`).
 bindsym $mod+slash exec --no-startup-id /home/jeremy/bin/i3lock-themed
 
+# Restart Wi-Fi connection (grave is the backtick/tilde key).
+bindsym $mod+grave exec gksudo /home/jeremy/bin/restart-wifi
+
 # Use mouse+$mod to drag floating windows.
 floating_modifier $mod
 

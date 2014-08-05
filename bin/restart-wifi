@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# My netctl network profile.
+NETCTL_PROFILE="wlan0-taco"
+
+# Need root to use netctl.
+if [ $USER != "root" ]
+then
+  echo "Error: must be root."
+  exit 1
+fi
+
+# Stop the network profile, and then update the i3status bar so we get some feedback.
+netctl stop "$NETCTL_PROFILE"
+killall -USR1 i3status
+
+# Start the network profile, and update the i3status bar again.
+netctl start "$NETCTL_PROFILE"
+killall -USR1 i3status
+
