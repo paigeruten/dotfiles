@@ -4,6 +4,14 @@ set $mod Mod4
 # Font for window titles.
 font pango:Inconsolata 10
 
+# Hook up backlight brightness keys to `xbacklight`.
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
+
+# Hook up keyboard brightness keys to `kbdlight`.
+bindsym XF86KbdBrightnessUp exec --no-startup-id kbdlight up
+bindsym XF86KbdBrightnessDown exec --no-startup-id kbdlight down
+
 # Hook up media keys to `cmus` (music player).
 bindsym XF86AudioPrev exec --no-startup-id cmus-remote --prev
 bindsym XF86AudioPlay exec --no-startup-id cmus-remote --pause
