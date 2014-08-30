@@ -14,7 +14,7 @@ alias vi=vim
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-# The prompt. Looks like: [jeremy@slupchik ~]$
+# The prompt. Looks like: [jeremy@ormus ~]$
 set_prompt() {
   # ANSI colour codes.
   local NORMAL='\[\e[0m\]'

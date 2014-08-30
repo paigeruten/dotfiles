@@ -12,8 +12,8 @@ fi
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
 # Setup external monitor if it's connected.
-if xrandr | grep "DP-1 connected"; then
-  xrandr --output DP-1 --auto --right-of LVDS-1
+if xrandr | grep "HDMI2 connected"; then
+  xrandr --output HDMI2 --auto --right-of eDP1
 fi
 
 # Set background wallpaper.

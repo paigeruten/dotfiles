@@ -12,7 +12,7 @@
 MOUNT_DIR=/mnt
 
 # The destination directory on the backup storage device.
-BACKUP_DIR=/backup/slupchik
+BACKUP_DIR=/backup/ormus
 
 # Need root to copy all files.
 if [ $USER != "root" ]

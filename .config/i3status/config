@@ -13,7 +13,7 @@ general {
 
 # The order in which each slice of info is displayed.
 order += "disk /"
-order += "wireless wlan0"
+order += "wireless wlp3s0"
 order += "battery 0"
 order += "cpu_usage"
 order += "volume master"
@@ -25,7 +25,7 @@ disk "/" {
 }
 
 # Wi-Fi IP address and ESSID.
-wireless wlan0 {
+wireless wlp3s0 {
   format_up = "%ip @ %essid"
   format_down = "Wi-Fi disconnected"
 }

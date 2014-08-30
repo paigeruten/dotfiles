@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # My netctl network profile.
-NETCTL_PROFILE="wlan0-taco"
+NETCTL_PROFILE="wlp3s0-taco"
 
 # Need root to use netctl.
 if [ $USER != "root" ]
