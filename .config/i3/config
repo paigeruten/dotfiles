@@ -19,15 +19,15 @@ bindsym XF86AudioNext exec --no-startup-id cmus-remote --next
 
 # Hook up audio keys to `amixer` (volume controller).
 # Also send the USR1 signal to update the i3status bar with the new volume.
-bindsym XF86AudioMute        exec --no-startup-id amixer -c 1 set Master toggle && killall -USR1 i3status
+bindsym XF86AudioMute        exec --no-startup-id amixer -D pulse set Master Playback Switch toggle && killall -USR1 i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -c 1 set Master 3%-    && killall -USR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -c 1 set Master 3%+    && killall -USR1 i3status
 
-# Start `dwb` web browser (mnemonic: it's also the `<` key, indicating HTML).
-bindsym $mod+comma exec dwb
+# Start `chromium` web browser (mnemonic: it's also the `<` key, indicating HTML).
+bindsym $mod+comma exec chromium
 
-# Start `pcmanfm` file manager (mnemonic: `.` and `..`, the ubiquitous folders).
-bindsym $mod+period exec pcmanfm
+# Start `thunar` file manager (mnemonic: `.` and `..`, the ubiquitous folders).
+bindsym $mod+period exec thunar
 
 # Lock screen (using themed version of `i3lock`).
 bindsym $mod+slash exec --no-startup-id /home/jeremy/bin/i3lock-themed

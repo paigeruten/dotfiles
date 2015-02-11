@@ -2,10 +2,19 @@
 [[ $- != *i* ]] && return
 
 # Add Ruby gem binaries to $PATH.
-PATH="`ruby -rubygems -e 'puts Gem.user_dir'`/bin:$PATH"
+export PATH="`ruby -rubygems -e 'puts Gem.user_dir'`/bin:$PATH"
 
 # Add ~/bin to $PATH.
-PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+
+# Add /usr/local/games to $PATH.
+export PATH="/usr/local/games:$PATH"
+
+# Add Heroku toolbelt to $PATH.
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# Add OS/161 toolchain to $PATH.
+export PATH="$HOME/os161/tools/bin:$PATH"
 
 # Always use vim, not vi.
 alias vi=vim
