@@ -45,8 +45,6 @@ volume master {
   format = "♪ %volume"
   format_muted = "♪ Mut"
   device = "default"
-  mixer = "Master"
-  mixer_idx = 0
 }
 
 # The current time, in "1:23pm" format.

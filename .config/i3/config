@@ -17,11 +17,11 @@ bindsym XF86AudioPrev exec --no-startup-id cmus-remote --prev
 bindsym XF86AudioPlay exec --no-startup-id cmus-remote --pause
 bindsym XF86AudioNext exec --no-startup-id cmus-remote --next
 
-# Hook up audio keys to `amixer` (volume controller).
+# Hook up audio keys to `pulseaudio-ctl` (volume controller).
 # Also send the USR1 signal to update the i3status bar with the new volume.
-bindsym XF86AudioMute        exec --no-startup-id amixer -D pulse set Master Playback Switch toggle && killall -USR1 i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -c 1 set Master 3%-    && killall -USR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -c 1 set Master 3%+    && killall -USR1 i3status
+bindsym XF86AudioMute        exec --no-startup-id pulseaudio-ctl mute && killall -USR1 i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down && killall -USR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up   && killall -USR1 i3status
 
 # Start `chromium` web browser (mnemonic: it's also the `<` key, indicating HTML).
 bindsym $mod+comma exec chromium
@@ -32,8 +32,12 @@ bindsym $mod+period exec thunar
 # Lock screen (using themed version of `i3lock`).
 bindsym $mod+slash exec --no-startup-id /home/jeremy/bin/i3lock-themed
 
-# Restart Wi-Fi connection (grave is the backtick/tilde key).
-bindsym $mod+grave exec gksudo /home/jeremy/bin/restart-wifi
+# Turn on/off external monitor using plus/minus keys.
+bindsym $mod+minus exec --no-startup-id xrandr --output HDMI2 --off
+bindsym $mod+equal exec --no-startup-id xrandr --output HDMI2 --auto --right-of eDP1
+
+# Invert screen colours using $mod+i.
+bindsym $mod+i exec --no-startup-id xrandr-invert-colors
 
 # Use mouse+$mod to drag floating windows.
 floating_modifier $mod
