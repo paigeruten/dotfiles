@@ -30,7 +30,7 @@ bindsym $mod+comma exec chromium
 bindsym $mod+period exec thunar
 
 # Lock screen (using themed version of `i3lock`).
-bindsym $mod+slash exec --no-startup-id /home/jeremy/bin/i3lock-themed
+bindsym XF86PowerOff exec --no-startup-id /home/jeremy/bin/i3lock-themed
 
 # Turn on/off external monitor using plus/minus keys.
 bindsym $mod+minus exec --no-startup-id xrandr --output HDMI2 --off
