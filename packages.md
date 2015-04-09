@@ -115,6 +115,7 @@ Here is where I am attempting to keep an up-to-date list of all the Arch Linux p
 * `lm_sensors`: hardware monitoring (I use the `xsensors` front end)
 * `mariadb`: MySQL server
 * `minecraft`: the game Minecraft
+* `mlocate`: file locator, provides `locate` and `updatedb`
 * `mp3info`: mp3 tag editor
 * `mpv`: video player
 * `mtpaint`: paint program
