@@ -1,9 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/jeremy/.oh-my-zsh
 
-# Enables "did you mean?" type of corrections.
-ENABLE_CORRECTION="true"
-
 # Non-confusing date format for history.
 HIST_STAMPS="yyyy-mm-dd"
 
