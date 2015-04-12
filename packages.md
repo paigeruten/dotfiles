@@ -174,6 +174,7 @@ Here is where I am attempting to keep an up-to-date list of all the Arch Linux p
 * `xorg-xev`: shows keycodes/keysyms for each keyboard key, and other event info
 * `xorg-xbacklight`: controls laptop screen backlight (which I hook up the backlight keys on my keyboard)
 * `xorg-xinit`: the `startx` program
+* `xorg-xinput`: configures input devices, useful for turning off mouse acceleration
 * `xorg-xrdb`: useful for applying configuration in an `~/.Xresources` file to X
 * `xrandr-invert-colors`: a program to invert all colours displayed on the screen (useful in dark rooms)
 * `xsensors`: X front end to `lm_sensors`, shows temperature readings
