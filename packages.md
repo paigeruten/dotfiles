@@ -95,7 +95,6 @@ Here is where I am attempting to keep an up-to-date list of all the Arch Linux p
 * `git`: version control
 * `gitg`: git repository visualizer
 * `gksu`: graphical `sudo`
-* `gradle-1.8`: build system for Java
 * `gst-libav`: streaming audio and video for `firefox`
 * `gtk-engines`: GTK themes, includes `Clearlooks`, `Crux`, `Industrial`, `Mist`, `Redmond`, and `ThinIce`
 * `higan-gtk`: emulator for NES, SNES, GB, and GBA
@@ -120,12 +119,8 @@ Here is where I am attempting to keep an up-to-date list of all the Arch Linux p
 * `mpv`: video player
 * `mtpaint`: paint program
 * `namcap`: checks pacman packages for problems (I use it when publishing packages)
-* `netbeans`: IDE for Java (and other languages)
 * `nodejs`: JavaScript platform
 * `ntop`: shows network usage
-* `openjfx`: JavaFX, GUI library
-* `openjfx-doc`: documentation for `openjfx`
-* `openjfx-src`: source code for `openjfx`
 * `openssh`: SSH tools such as `scp`, `ssh`, `ssh-agent`, `ssh-keygen`, and `sshd`
 * `paprefs`: simple graphical configuration dialog for `pulseaudio`
 * `pass`: password manager
@@ -266,7 +261,6 @@ Here is where I am attempting to keep an up-to-date list of all the Arch Linux p
 * `gnome-icon-theme-symbolic`
 * `gnupg`
 * `gnutls`
-* `gobject-introspection`
 * `gpgme`
 * `gpm`
 * `graphite`
@@ -591,7 +585,6 @@ Here is where I am attempting to keep an up-to-date list of all the Arch Linux p
 * `python-setuptools`
 * `python-xdg`
 * `python2`
-* `python2-beaker`
 * `python2-cairo`
 * `python2-cffi`
 * `python2-cryptography`
@@ -600,8 +593,6 @@ Here is where I am attempting to keep an up-to-date list of all the Arch Linux p
 * `python2-ecdsa`
 * `python2-enum34`
 * `python2-gobject2`
-* `python2-mako`
-* `python2-markupsafe`
 * `python2-pbkdf2`
 * `python2-pillow`
 * `python2-ply`
