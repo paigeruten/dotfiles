@@ -74,6 +74,7 @@ Here is where I am attempting to keep an up-to-date list of all the Arch Linux p
 * `broadcom-wl`: driver for wi-fi hardware
 * `chromium`: Google Chrome web browser
 * `chromium-pepper-flash`: Flash plugin for `chromium`
+* `chuck-pulse`: the ChucK music programming language
 * `cmus`: music player
 * `cups`: printing system
 * `dialog`: displays dialog boxes from shell scripts, used by `wifi-menu` of the `netctl` package
