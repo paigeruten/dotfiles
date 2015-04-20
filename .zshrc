@@ -20,11 +20,14 @@ export PATH="`ruby -rubygems -e 'puts Gem.user_dir'`/bin:$PATH"
 export PATH="$HOME/node_modules/.bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
 # Always use vim, not vi.
 alias vi=vim
 
-# oh-my-zsh
-source $ZSH/oh-my-zsh.sh
+# Colour 'ls' output and show file types (* for executables, / for directories, etc.).
+alias ls='ls --color=auto -F'
 
 # Source the syntax highlighting plugin.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

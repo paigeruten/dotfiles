@@ -13,9 +13,24 @@ set colorcolumn=80,100
 set background=dark
 colorscheme solarized
 
-" load file type plugins
-filetype plugin on
+" leader keys
+let mapleader = ","
+let maplocalleader = "\\"
 
-" auto indent based on filetype
+" type jk to leave insert mode
+inoremap jk <esc>
+inoremap <esc> <nop>
+
+" don't let myself use the arrow keys
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
+
+" quickly edit and source this vimrc
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" enable filetype plugins, with autoindent
 filetype plugin indent on
 
