@@ -123,6 +123,7 @@ Here is where I am attempting to keep an up-to-date list of all the Arch Linux p
 * `nodejs`: JavaScript platform
 * `ntop`: shows network usage
 * `openssh`: SSH tools such as `scp`, `ssh`, `ssh-agent`, `ssh-keygen`, and `sshd`
+* `otf-inconsolata-powerline-git`: Inconsolata font for powerline
 * `paprefs`: simple graphical configuration dialog for `pulseaudio`
 * `pass`: password manager
 * `pavucontrol`: graphical volume controller for `pulseaudio`
