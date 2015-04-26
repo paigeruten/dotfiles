@@ -2,11 +2,11 @@
 XTerm*locale: true
 XTerm*saveLines: 4096
 XTerm*selectToClipboard: true
-XTerm*faceName: Inconsolata:size=20:antialias=false
+XTerm*faceName: Inconsolata for Powerline:size=20:antialias=false
 XTerm*borderWidth: 0
 
 ! urxvt
-URxvt*font: xft:Inconsolata:size=20:antialias=false
+URxvt*font: xft:Inconsolata for Powerline:size=20:antialias=false
 URxvt.letterSpace: -2
 URxvt*scrollBar: false
 URxvt*jumpScroll: true
