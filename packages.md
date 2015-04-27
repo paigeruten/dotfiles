@@ -120,6 +120,7 @@ Here is where I am attempting to keep an up-to-date list of all the Arch Linux p
 * `mpv`: video player
 * `mtpaint`: paint program
 * `namcap`: checks pacman packages for problems (I use it when publishing packages)
+* `net-tools`: basic network utilities such as `hostname`, `ifconfig`, `netstat`, and `route`
 * `nodejs`: JavaScript platform
 * `ntop`: shows network usage
 * `openssh`: SSH tools such as `scp`, `ssh`, `ssh-agent`, `ssh-keygen`, and `sshd`
