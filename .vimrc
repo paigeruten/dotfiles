@@ -6,8 +6,9 @@ set shiftwidth=2       " two-space tabs
 set softtabstop=2      " yes, two-space tabs
 set autoindent         " simple auto indent
 set laststatus=2       " always show status line
+set foldlevelstart=99  " open all folds by default
 
-" I try to keep comments 80 chars wide, and code never more than 100.
+" I try to keep comments 80 chars wide, and code never more than 100
 set colorcolumn=80,100
 
 " color scheme
@@ -28,7 +29,7 @@ let g:lightline = {
   \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
   \ },
   \ 'separator': { 'left': '', 'right': '' },
-  \ 'subseparator': { 'left': '|', 'right': '|' }
+  \ 'subseparator': { 'left': '', 'right': '' }
   \ }
 
 " leader keys

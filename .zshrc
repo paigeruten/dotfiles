@@ -28,6 +28,7 @@ alias vi=vim
 
 # Colour 'ls' output and show file types (* for executables, / for directories, etc.).
 alias ls='ls --color=auto -F'
+eval $(dircolors ~/.dircolors)
 
 # Source the syntax highlighting plugin.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

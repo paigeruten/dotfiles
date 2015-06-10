@@ -141,12 +141,12 @@ Here is where I am attempting to keep an up-to-date list of all the Arch Linux p
 * `rsync`: useful for keeping backups of directories
 * `ruby`: the Ruby programming language
 * `rust-nightly-bin`: the Rust programming language
-* `rxvt-unicode`: terminal emulator
 * `shuffle`: works like `sort`, useful for shuffled playlists or getting random words from `/usr/share/dict`
 * `slim`: login screen for X
 * `steam`: Steam (games!)
 * `swi-prolog`: Prolog environment
 * `task`: command line todo list
+* `termite-git`: terminal emulator
 * `thunar`: file browser
 * `transmission-gtk`: BitTorrent client
 * `ttf-dejavu`: DejaVu font family

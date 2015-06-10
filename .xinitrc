@@ -19,6 +19,9 @@ fi
 # Set background wallpaper.
 feh --bg-tile ~/images/backgrounds/current.jpg &
 
+# Start ssh-agent.
+eval $(ssh-agent)
+
 # Start the `i3` window manager.
 exec i3
 
