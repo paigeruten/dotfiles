@@ -16,39 +16,39 @@ order += "disk /"
 order += "wireless wlp3s0"
 order += "battery 0"
 order += "cpu_usage"
-order += "volume master"
+#order += "volume master"
 order += "tztime local"
 
 # Disk space left on my single partition.
 disk "/" {
-  format = "%avail"
+  format = "%avail "
 }
 
 # Wi-Fi IP address and ESSID.
 wireless wlp3s0 {
-  format_up = "%ip @ %essid"
-  format_down = "Wi-Fi disconnected"
+  format_up = " %ip @ %essid "
+  format_down = " Wi-Fi disconnected "
 }
 
 # Battery, percentage remaining and time remaining.
 battery 0 {
-  format = "PWR %percentage %remaining"
+  format = " PWR %percentage %remaining "
 }
 
 # CPU usage as a percentage.
 cpu_usage {
-  format = "CPU %usage"
+  format = " CPU %usage "
 }
 
 # Current volume as a percentage, or "Mut" if muted.
-volume master {
-  format = "♪ %volume"
-  format_muted = "♪ Mut"
-  device = "default"
-}
+#volume master {
+#  format = "♪ %volume"
+#  format_muted = "♪ Mut"
+#  device = "default"
+#}
 
-# The current time, in "1:23pm" format.
+# The current date and time, in "1:23pm" format.
 tztime local {
-  format = "%l:%M%P"
+  format = " %l:%M%P %Y-%m-%d"
 }
 

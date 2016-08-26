@@ -1,32 +1,44 @@
 [options]
-font = Inconsolata-g for Powerline 16
+font = Fira Mono 9
 
-# Solarized dark color scheme
+# Chalk theme (light)
 [colors]
-foreground = #839496
-foreground_bold = #eee8d5
-#foreground_dim = #888888
-background = #002b36
-cursor = #93a1a1
 
-# if unset, will reverse foreground and background
-#highlight = #839496
+# special
+foreground      = #303030
+foreground_bold = #303030
+cursor          = #303030
+background      = #f5f5f5
 
-# colors from color0 to color254 can be set
-color0 = #073642
-color1 = #dc322f
-color2 = #859900
-color3 = #b58900
-color4 = #268bd2
-color5 = #d33682
-color6 = #2aa198
-color7 = #eee8d5
-color8 = #002b36
-color9 = #cb4b16
-color10 = #586e75
-color11 = #657b83
-color12 = #839496
-color13 = #6c71c4
-color14 = #93a1a1
-color15 = #fdf6e3
+# black
+color0  = #151515
+color8  = #505050
+
+# red
+color1  = #fb9fb1
+color9  = #fb9fb1
+
+# green
+color2  = #acc267
+color10 = #acc267
+
+# yellow
+color3  = #ddb26f
+color11 = #ddb26f
+
+# blue
+color4  = #6fc2ef
+color12 = #6fc2ef
+
+# magenta
+color5  = #e1a3ee
+color13 = #e1a3ee
+
+# cyan
+color6  = #12cfc0
+color14 = #12cfc0
+
+# white
+color7  = #d0d0d0
+color15 = #f5f5f5
 

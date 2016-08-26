@@ -1,50 +1,36 @@
-# Path to your oh-my-zsh installation.
-export ZSH=/home/jeremy/.oh-my-zsh
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/jeremy/.zshrc'
 
-# Non-confusing date format for history.
-HIST_STAMPS="yyyy-mm-dd"
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
 
-# oh-my-zsh plugins. Keeping them to a minimum, otherwise startup is way too
-# slow.
-#
-#   command-not-found: If command isn't found, suggests what Arch package to
-#     install to get the command.
-#   git: Git stuff.
-#   sudo: Hit escape twice to prepend sudo to your command-in-progress.
-#
-plugins=(command-not-found git sudo)
+# Colors
+eval `dircolors ~/.dircolors`
+alias ls="ls --color=auto -F"
+alias grep="grep --color=auto"
 
-# Add local binaries, and Ruby and NodeJS package binaries to $PATH.
-export PATH="$HOME/bin:$PATH"
-export PATH="`ruby -rubygems -e 'puts Gem.user_dir'`/bin:$PATH"
-export PATH="$HOME/node_modules/.bin:$PATH"
-export PATH="/usr/local/heroku/bin:$PATH"
+# Vi bindings for line editing
+bindkey -v
 
-# oh-my-zsh
-source $ZSH/oh-my-zsh.sh
-
-# Always use vim, not vi.
-alias vi=vim
-
-# Colour 'ls' output and show file types (* for executables, / for directories, etc.).
-alias ls='ls --color=auto -F'
-eval $(dircolors ~/.dircolors)
-
-# Source the syntax highlighting plugin.
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Save 1000 lines of history in ~/.zhistory with no duplicates
+HISTFILE="$HOME/.zhistory"
+HISTSIZE=1000
+SAVEHIST=10000
+setopt appendhistory
+setopt histignorealldups
 
 # The prompt. Looks like: [jeremy@ormus ~]$
-PROMPT='%{$fg_bold[green]%}[%n@%m %{$fg[red]%}%2c%{$fg_bold[green]%}]$ '
+autoload -Uz colors && colors
+PROMPT="%{$fg_bold[green]%}[%n@%m %{$fg_no_bold[red]%}%2c%{$fg_bold[green]%}]$ %{$reset_color%}%b"
 
-# The right-hand-side prompt. Displays current git branch if any (with dirty/
-# clean marker), and the time.
-RPROMPT='$(git_prompt_info) %{$fg_bold[green]%}%*%{$reset_color%}'
+# Show exit status (if non-zero), date, and time on right hand side
+RPROMPT="%(?..%{$fg_bold[red]%}[%?]%{$reset_color%}%b  )%{$fg[yellow]%}20%D %t%{$reset_color%}%b"
 
-# Display current git branch in bright white.
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[white]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+# Fish-style command syntax highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Give a red X for a dirty branch, or a light grey check mark for a clean one.
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}✗%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[cyan]%}✔%{$reset_color%}"
+# When you type a command that doesn't exist, this shows you packages that
+# provide that command.
+source /usr/share/doc/pkgfile/command-not-found.zsh
 

@@ -2,51 +2,31 @@
 set $mod Mod4
 
 # Font for window titles.
-font pango:Inconsolata 10
+font pango:Fira Mono 9
 
 # Hook up backlight brightness keys to `xbacklight`.
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 # Hook up keyboard brightness keys to `kbdlight`.
-bindsym XF86KbdBrightnessUp exec --no-startup-id kbdlight up
-bindsym XF86KbdBrightnessDown exec --no-startup-id kbdlight down
+bindsym XF86KbdBrightnessUp exec kbdlight up
+bindsym XF86KbdBrightnessDown exec kbdlight down
 
-# Hook up media keys to `cmus` (music player).
-bindsym XF86AudioPrev exec --no-startup-id cmus-remote --prev
-bindsym XF86AudioPlay exec --no-startup-id cmus-remote --pause
-bindsym XF86AudioNext exec --no-startup-id cmus-remote --next
-
-# Hook up audio keys to `pulseaudio-ctl` (volume controller).
-# Also send the USR1 signal to update the i3status bar with the new volume.
-bindsym XF86AudioMute        exec --no-startup-id pulseaudio-ctl mute && killall -USR1 i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down && killall -USR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up   && killall -USR1 i3status
-
-# Start `chromium` web browser (mnemonic: it's also the `<` key, indicating HTML).
-bindsym $mod+comma exec chromium
-
-# Start a web browser instance that's configured for Pencil Code development.
-bindsym $mod+Shift+comma exec chromium --host-resolver-rules="MAP *pencilcode.net.dev localhost:8008" --user-data-dir=$HOME/.devchrome --ignore-certificate-errors http://pencilcode.net.dev/
-
-# Start `thunar` file manager (mnemonic: `.` and `..`, the ubiquitous folders).
-bindsym $mod+period exec thunar
-
-# Lock screen (using themed version of `i3lock`).
-bindsym XF86PowerOff exec --no-startup-id /home/jeremy/bin/i3lock-themed
+# Lock screen.
+bindsym XF86PowerOff exec i3lock-fancy-multimonitor
 
 # Turn on/off external monitor using plus/minus keys.
-bindsym $mod+minus exec --no-startup-id xrandr --output HDMI2 --off
-bindsym $mod+equal exec --no-startup-id xrandr --output HDMI2 --auto --right-of eDP1
+bindsym $mod+minus exec xrandr --output HDMI2 --off
+bindsym $mod+equal exec xrandr --output HDMI2 --auto --right-of eDP1
 
-# Invert screen colours using $mod+i.
-bindsym $mod+i exec --no-startup-id xrandr-invert-colors
+# Start `firefox` web browser (mnemonic: it's also the `<` key, indicating HTML).
+bindsym $mod+comma exec firefox
 
 # Use mouse+$mod to drag floating windows.
 floating_modifier $mod
 
 # Start a terminal.
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec i3-sensible-terminal
 
 # Put workspaces 1-5 on laptop screen, 6-10 on external monitor.
 workspace 1 output eDP1
@@ -64,7 +44,7 @@ workspace 10 output HDMI2
 bindsym $mod+Shift+q kill
 
 # Start `dmenu` (a program launcher).
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -nb '#f5f5f5' -nf '#151515' -sb '#f5f5f5' -sf '#acc267' -fn 'DejaVu Sans Mono-13'
 
 # Change focus.
 bindsym $mod+j focus left
@@ -85,17 +65,17 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # Enter fullscreen mode for the focused container.
-bindsym $mod+f fullscreen
+bindsym $mod+f fullscreen toggle
 
 # Change container layout (stacked, tabbed, toggle split).
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
-# Toggle tiling/floating.
+# Toggle tiling / floating.
 bindsym $mod+Shift+space floating toggle
 
-# Change focus between tiling/floating windows.
+# Change focus between tiling / floating windows.
 bindsym $mod+space focus mode_toggle
 
 # Focus the parent container.
@@ -150,32 +130,27 @@ mode "resize" {
   bindsym Escape mode "default"
 }
 
-# An orange, white, & grey theme.
-  # color class           border  backgr. text    indicator
-  client.focused          #ee6600 #ff7700 #ffffff #ffaa44
-  client.focused_inactive #555555 #444444 #aaaaaa #777777
-  client.unfocused        #333333 #222222 #888888 #555555
-  client.urgent           #3a342f #900000 #ffffff #c00000
-
 # Configure i3bar.
 bar {
   # Use `i3status` to output status info.
   status_command i3status
+  position top
 
-  # Same font as window titles.
-  font pango:Inconsolata 10
-
-  # Same colours defined in the theme above, but with a dark background.
+  # Theme based on base16 chalk (see ./mychalk).
   colors {
-    background #111111
-    statusline #ffffff
-    separator #666666
-
-    # color class      border  backgr. text
-    focused_workspace  #ff7700 #dd6600 #ffffff
-    active_workspace   #aa5500 #884400 #cccccc
-    inactive_workspace #333333 #222222 #888888
-    urgent_workspace   #2f343a #900000 #ffffff
+    separator #eda987
+    background #f5f5f5
+    statusline #ddb26f
+    focused_workspace #acc267 #acc267 #f5f5f5
+    active_workspace #d0d0d0 #d0d0d0 #151515
+    inactive_workspace #e0e0e0 #e0e0e0 #b0b0b0
+    urgent_workspace #fb9fb1 #fb9fb1 #151515
   }
 }
+
+# Theme based on base16 chalk (see ./mychalk).
+client.focused #acc267 #acc267 #f5f5f5 #e0e0e0
+client.focused_inactive #d0d0d0 #d0d0d0 #b0b0b0 #e0e0e0
+client.unfocused #e0e0e0 #e0e0e0 #b0b0b0 #e0e0e0
+client.urgent #d0d0d0 #fb9fb1 #151515 #fb9fb1
 

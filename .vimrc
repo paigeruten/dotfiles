@@ -1,3 +1,31 @@
+" required by Vundle
+set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+  Plugin 'VundleVim/Vundle.vim'
+
+  " better status line
+  Plugin 'itchyny/lightline.vim'
+
+  " figures out what type of indentation to use
+  Plugin 'tpope/vim-sleuth'
+
+  " highlights extraneous whitespace and helps you remove it
+  Plugin 'ntpeters/vim-better-whitespace'
+
+  " language plugins
+  Plugin 'rust-lang/rust.vim'
+  Plugin 'cespare/vim-toml'
+  Plugin 'plasticboy/vim-markdown'
+  Plugin 'kchmck/vim-coffee-script'
+call vundle#end()
+
+" required by Vundle
+filetype plugin indent on
+
 syntax on              " syntax highlighting
 set number             " line numbers
 set incsearch          " search as you type
@@ -10,27 +38,6 @@ set foldlevelstart=99  " open all folds by default
 
 " I try to keep comments 80 chars wide, and code never more than 100
 set colorcolumn=80,100
-
-" color scheme
-set background=dark
-colorscheme solarized
-
-" configure lightline (status line plugin)
-let g:lightline = {
-  \ 'colorscheme': 'solarized_dark',
-  \ 'active': {
-  \   'left': [['mode'], ['fugitive', 'readonly', 'filename', 'modified']]
-  \ },
-  \ 'component': {
-  \   'readonly': '%{&readonly?"":""}',
-  \   'fugitive': '%{exists("*fugitive#head") && ""!=fugitive#head() ? " ".fugitive#head() : ""}'
-  \ },
-  \ 'component_visible_condition': {
-  \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-  \ },
-  \ 'separator': { 'left': '', 'right': '' },
-  \ 'subseparator': { 'left': '', 'right': '' }
-  \ }
 
 " leader keys
 let mapleader = ","
@@ -47,12 +54,9 @@ noremap <left> <nop>
 noremap <right> <nop>
 
 " remove all trailing whitespace (plugin)
-nnoremap <leader><space> :FixWhitespace<cr>
+nnoremap <leader><space> :StripWhitespace<cr>
 
 " quickly edit and source this vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-
-" enable filetype plugins, with autoindent
-filetype plugin indent on
 
