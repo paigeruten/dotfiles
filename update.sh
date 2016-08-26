@@ -31,16 +31,16 @@ echo >> packages.md
 
 echo '## Explicitly installed packages' >> packages.md
 echo >> packages.md
-expac '  * `%n`: %d' $(comm -23 <(pacman -Qqen | sort) <(pacman -Qqg base base-devel | sort)) >> packages.md
+expac '  * `%n` %d' $(comm -23 <(pacman -Qqen | sort) <(pacman -Qqg base base-devel | sort)) >> packages.md
 echo >> packages.md
 
 echo '## AUR packages' >> packages.md
 echo >> packages.md
-expac '  * `%n`: %d' $(pacman -Qqm) >> packages.md
+expac '  * `%n` %d' $(pacman -Qqm) >> packages.md
 echo >> packages.md
 
 echo '## All packages' >> packages.md
 echo >> packages.md
-expac --timefmt='%Y-%m-%d %T' '  * `%l` **%n** (%v)' | sort >> packages.md
+expac --timefmt='%Y-%m-%d %T' '  * `%l` **%n** %v' >> packages.md
 echo >> packages.md
 
