@@ -1,4 +1,11 @@
-# Add ~/bin and ~/.node_modules/bin to $PATH.
 typeset -U path
-path=(~/bin ~/.node_modules/bin $path[@])
+
+# npm
+path=(~/.node_modules/bin $path[@])
+
+# rubygems
+path=($(ruby -rubygems -e 'puts Gem.user_dir')/bin $path[@])
+
+# ~/bin
+path=(~/bin $path[@])
 
