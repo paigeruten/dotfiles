@@ -1,15 +1,16 @@
 # Arch Linux Packages
 
-I currently have `416` packages installed:
+I currently have `445` packages installed:
 
   * `75` packages are in the `base` or `base-devel` groups.
-  * `47` non-base packages were explicitly installed by me.
-    * `7` of these are from the [AUR](https://aur.archlinux.org).
-  * `294` packages were installed as dependencies to other packages.
+  * `49` non-base packages were explicitly installed by me.
+    * `6` of these are from the [AUR](https://aur.archlinux.org).
+  * `321` packages were installed as dependencies to other packages.
 
 ## Explicitly installed packages
 
   * `adobe-source-han-sans-otc-fonts` Adobe Source Han Sans - Pan-CJK OpenType/CFF Collection fonts
+  * `alsa-utils` An alternative implementation of Linux sound support
   * `boost` Free peer-reviewed portable C++ source libraries - development headers
   * `cmake` A cross-platform open-source make system
   * `dialog` A tool to display dialog boxes from shell scripts
@@ -30,6 +31,8 @@ I currently have `416` packages installed:
   * `iw` nl80211 based CLI configuration utility for wireless devices
   * `linux-headers` Header files and scripts for building modules for Linux kernel
   * `lxappearance` Feature-rich GTK+ theme switcher of the LXDE Desktop
+  * `mlocate` Merging locate/updatedb implementation
+  * `mpv` a free, open source, and cross-platform media player
   * `nodejs` Evented I/O for V8 javascript
   * `noto-fonts` Google Noto TTF fonts
   * `noto-fonts-emoji` Google Noto emoji fonts
@@ -65,7 +68,6 @@ I currently have `416` packages installed:
 
   * `broadcom-wl` Broadcom 802.11abgn hybrid Linux networking device driver
   * `conkeror-git` A highly programmable web browser based on Mozilla XULRunner
-  * `exercism-cli` Command line client for exercism.io
   * `i3lock-color-git` An improved screenlocker based upon XCB and PAM with color configuration support
   * `kbdlight` A very simple application that changes MacBooks' keyboard backlight level.
   * `lostfiles` Find orphaned files not owned by any Arch packages
@@ -77,6 +79,7 @@ I currently have `416` packages installed:
   * `2016-08-25 20:44:55` **adobe-source-han-sans-otc-fonts** 1.004-1
   * `2016-08-24 05:50:05` **adwaita-icon-theme** 3.20-2
   * `2016-08-24 05:26:41` **alsa-lib** 1.1.2-1
+  * `2016-08-28 17:36:59` **alsa-utils** 1.1.2-1
   * `2016-08-22 22:28:35` **archlinux-keyring** 20160812-1
   * `2016-08-24 05:50:04` **at-spi2-atk** 2.20.1-2
   * `2016-08-24 05:50:04` **at-spi2-core** 2.20.2-1
@@ -97,6 +100,7 @@ I currently have `416` packages installed:
   * `2016-08-22 22:28:35` **ca-certificates-mozilla** 3.26-1
   * `2016-08-22 22:28:35` **ca-certificates-utils** 20160507-1
   * `2016-08-24 05:26:41` **cairo** 1.14.6-2
+  * `2016-08-28 19:20:07` **cifs-utils** 6.5-1
   * `2016-08-25 14:23:51` **cmake** 3.6.1-1
   * `2016-08-24 05:50:04` **colord** 1.3.2-2
   * `2016-08-24 05:50:04` **compositeproto** 0.4.2-3
@@ -123,12 +127,13 @@ I currently have `416` packages installed:
   * `2016-08-25 21:56:42` **efibootmgr** 13-1
   * `2016-08-25 21:56:42` **efivar** 27-1
   * `2016-08-24 05:06:57` **elfutils** 0.166-1
-  * `2016-08-25 14:27:40` **exercism-cli** v2.3.0-1
+  * `2016-08-28 19:20:07` **enca** 1.18-1
   * `2016-08-23 00:41:11` **exfat-utils** 1.2.4-1
   * `2016-08-25 21:46:36` **expac** 7-1
   * `2016-08-22 22:28:17` **expat** 2.2.0-2
   * `2016-08-22 22:28:36` **fakeroot** 1.21-2
   * `2016-08-24 07:03:18` **ffmpeg** 1:3.1.2-1
+  * `2016-08-28 17:36:59` **fftw** 3.3.5-1
   * `2016-08-22 22:28:19` **file** 5.28-1
   * `2016-08-22 22:28:13` **filesystem** 2015.09-1
   * `2016-08-22 22:28:19` **findutils** 4.6.0-2
@@ -193,6 +198,7 @@ I currently have `416` packages installed:
   * `2016-08-22 22:28:17` **iptables** 1.6.0-1
   * `2016-08-22 22:28:19` **iputils** 20160308.0db72a4-1
   * `2016-08-22 22:44:45` **iw** 4.7-1
+  * `2016-08-28 19:20:07` **jack** 0.124.1-6
   * `2016-08-24 05:50:04` **jasper** 1.900.1-15
   * `2016-08-25 17:41:38` **jbig2dec** 0.12-1
   * `2016-08-22 22:28:19` **jfsutils** 1.1.15-4
@@ -208,6 +214,7 @@ I currently have `416` packages installed:
   * `2016-08-22 22:28:18` **krb5** 1.13.4-1
   * `2016-08-24 07:03:16` **lame** 3.99.5-3
   * `2016-08-24 05:50:04` **lcms2** 2.8-1
+  * `2016-08-28 19:20:07` **ldb** 1.1.26-1
   * `2016-08-24 17:02:49` **ldns** 1.6.17-4
   * `2016-08-22 22:28:19` **less** 481-2
   * `2016-08-22 22:28:34` **libaio** 0.3.110-1
@@ -219,7 +226,12 @@ I currently have `416` packages installed:
   * `2016-08-24 07:03:16` **libavc1394** 0.5.4-2
   * `2016-08-24 07:03:16` **libbluray** 0.9.2-2
   * `2016-08-22 22:43:22` **libbsd** 0.8.3-1
+  * `2016-08-28 19:20:07` **libcaca** 0.99.beta19-1
   * `2016-08-22 22:28:16` **libcap** 2.25-1
+  * `2016-08-28 19:20:07` **libcap-ng** 0.7.8-1
+  * `2016-08-28 19:20:07` **libcddb** 1.3.2-4
+  * `2016-08-28 19:20:07` **libcdio** 0.93-4
+  * `2016-08-28 19:20:07` **libcdio-paranoia** 10.2+0.93+1-2
   * `2016-08-24 05:50:04` **libcroco** 0.6.11-1
   * `2016-08-24 05:50:04` **libcups** 2.1.4-2
   * `2016-08-24 05:50:04` **libdaemon** 0.14-3
@@ -227,6 +239,8 @@ I currently have `416` packages installed:
   * `2016-08-22 22:28:17` **libdbus** 1.10.8-1
   * `2016-08-24 15:47:01` **libdmx** 1.1.3-1
   * `2016-08-24 05:06:54` **libdrm** 2.4.70-1
+  * `2016-08-28 19:20:07` **libdvdnav** 5.0.3-1
+  * `2016-08-28 19:20:07` **libdvdread** 5.0.4-1
   * `2016-08-24 05:06:57` **libedit** 20160618_3.1-1
   * `2016-08-22 22:28:18` **libelf** 0.166-1
   * `2016-08-24 05:06:54` **libepoxy** 1.3.1-1
@@ -262,6 +276,7 @@ I currently have `416` packages installed:
   * `2016-08-24 05:26:41` **libpulse** 9.0-1
   * `2016-08-24 07:03:16` **libraw1394** 2.1.2-1
   * `2016-08-24 05:50:04` **librsvg** 2:2.40.16-1
+  * `2016-08-28 17:36:59` **libsamplerate** 0.1.8-3
   * `2016-08-22 22:28:18` **libsasl** 2.1.26-8
   * `2016-08-22 22:28:18` **libseccomp** 2.3.1-1
   * `2016-08-23 00:55:36` **libsm** 1.2.2-2
@@ -290,6 +305,7 @@ I currently have `416` packages installed:
   * `2016-08-24 05:26:41` **libvorbis** 1.3.5-1
   * `2016-08-24 07:03:17` **libvpx** 1.6.0-2
   * `2016-08-24 05:06:59` **libwacom** 0.22-1
+  * `2016-08-28 19:20:07` **libwbclient** 4.4.5-1
   * `2016-08-24 07:03:16` **libwebp** 0.5.1-1
   * `2016-08-23 00:55:36` **libx11** 1.6.3-1
   * `2016-08-24 07:03:17` **libx264** 2:148.20160613-2
@@ -313,6 +329,7 @@ I currently have `416` packages installed:
   * `2016-08-24 05:50:04` **libxrandr** 1.5.0-1
   * `2016-08-24 05:26:41` **libxrender** 0.9.9-1
   * `2016-08-24 05:06:57` **libxshmfence** 1.2-1
+  * `2016-08-28 19:20:07` **libxss** 1.2.2-2
   * `2016-08-23 00:55:36` **libxt** 1.1.5-1
   * `2016-08-24 05:26:41` **libxtst** 1.2.2-1
   * `2016-08-24 16:49:58` **libxv** 1.0.10-1
@@ -328,6 +345,7 @@ I currently have `416` packages installed:
   * `2016-08-24 05:06:58` **llvm-libs** 3.8.1-1
   * `2016-08-22 22:28:34` **logrotate** 3.9.2-1
   * `2016-08-25 22:00:25` **lostfiles** 3.25-1
+  * `2016-08-28 19:20:07` **lua52** 5.2.4-1
   * `2016-08-22 22:28:34` **lvm2** 2.02.164-1
   * `2016-08-24 23:44:16` **lxappearance** 0.6.2-1
   * `2016-08-22 22:28:17` **lz4** 131-2
@@ -342,8 +360,10 @@ I currently have `416` packages installed:
   * `2016-08-24 07:03:16` **mime-types** 9-1
   * `2016-08-22 22:28:22` **mkinitcpio** 20-1
   * `2016-08-22 22:28:22` **mkinitcpio-busybox** 1.24.2-1
+  * `2016-08-28 18:20:27` **mlocate** 0.26-5
   * `2016-08-24 07:03:16` **mozilla-common** 1.4-4
   * `2016-08-22 22:28:19` **mpfr** 3.1.4.p1-1
+  * `2016-08-28 19:20:09` **mpv** 1:0.19.0-1
   * `2016-08-24 05:06:59` **mtdev** 1.1.5-1
   * `2016-08-22 22:28:35` **nano** 2.6.3-1
   * `2016-08-22 22:28:15` **ncurses** 6.0-4
@@ -389,22 +409,27 @@ I currently have `416` packages installed:
   * `2016-08-22 22:28:36` **procps-ng** 3.3.12-1
   * `2016-08-22 22:28:36` **psmisc** 22.21-3
   * `2016-08-23 00:55:36` **pwgen** 2.07-1
+  * `2016-08-28 19:20:08` **python2** 2.7.12-1
   * `2016-08-24 05:50:04` **randrproto** 1.5.0-1
   * `2016-08-22 22:28:15` **readline** 6.3.008-4
+  * `2016-08-28 19:20:07` **recode** 3.6-9
   * `2016-08-24 05:26:41` **recordproto** 1.14.2-2
   * `2016-08-22 22:28:36` **reiserfsprogs** 3.6.25-1
   * `2016-08-24 05:26:41` **renderproto** 0.11.1-3
   * `2016-08-24 05:50:05` **rest** 0.8.0-1
+  * `2016-08-28 19:20:09` **rubberband** 1.8.1-3
   * `2016-08-25 23:43:45` **ruby** 2.3.1-1
   * `2016-08-23 03:03:51` **rustup** 0.5.0-2
   * `2016-08-22 22:28:36` **s-nail** 14.8.10-1
   * `2016-08-24 07:03:16` **schroedinger** 1.0.11-3
+  * `2016-08-28 19:20:07` **scrnsaverproto** 1.2.2-2
   * `2016-08-25 21:31:41` **scrot** 0.8.13-1
   * `2016-08-24 07:03:17` **sdl** 1.2.15-7
   * `2016-08-22 22:28:36` **sed** 4.2.2-4
   * `2016-08-24 22:37:00` **semver** 5.3.0-1
   * `2016-08-22 22:28:18` **shadow** 4.2.1-3
   * `2016-08-24 05:50:04` **shared-mime-info** 1.6-2
+  * `2016-08-28 19:20:09` **smbclient** 4.4.5-1
   * `2016-08-24 07:03:17` **speex** 1.2rc2-1
   * `2016-08-24 07:03:17` **speexdsp** 1.2rc3-2
   * `2016-08-22 22:28:35` **sqlite** 3.14.1-1
@@ -413,9 +438,12 @@ I currently have `416` packages installed:
   * `2016-08-22 22:28:19` **sysfsutils** 2.1.0-9
   * `2016-08-22 22:28:19` **systemd** 231-1
   * `2016-08-22 22:28:36` **systemd-sysvcompat** 231-1
+  * `2016-08-28 19:20:07` **talloc** 2.1.8-1
   * `2016-08-22 22:28:36` **tar** 1.29-1
+  * `2016-08-28 19:20:07` **tdb** 1.3.9-1
   * `2016-08-24 05:50:06` **termite** 11-3
   * `2016-08-24 05:50:06` **termite-terminfo** 11-3
+  * `2016-08-28 19:20:07` **tevent** 0.9.28-1
   * `2016-08-22 22:28:36` **texinfo** 6.1-4
   * `2016-08-22 22:28:34` **thin-provisioning-tools** 0.6.3-1
   * `2016-08-23 02:13:31` **tmux** 2.2-1
@@ -427,6 +455,7 @@ I currently have `416` packages installed:
   * `2016-08-22 22:28:36` **usbutils** 008-1
   * `2016-08-22 22:28:18` **util-linux** 2.28.1-1
   * `2016-08-24 07:03:17` **v4l-utils** 1.10.1-1
+  * `2016-08-28 19:20:09` **vamp-plugin-sdk** 2.6-1
   * `2016-08-22 22:28:36` **vi** 1:070224-2
   * `2016-08-24 07:03:17` **vid.stab** 1.1-1
   * `2016-08-24 16:49:58` **videoproto** 2.3.3-1
@@ -485,6 +514,8 @@ I currently have `416` packages installed:
   * `2016-08-24 05:26:41` **yajl** 2.1.0-1
   * `2016-08-25 17:41:38` **zathura** 0.3.6-2
   * `2016-08-25 17:41:38` **zathura-pdf-mupdf** 0.3.0-2
+  * `2016-08-28 19:20:07` **zita-alsa-pcmi** 0.2.0-3
+  * `2016-08-28 19:20:07` **zita-resampler** 1.3.0-5
   * `2016-08-22 22:28:17` **zlib** 1.2.8-4
   * `2016-08-23 01:57:59` **zsh** 5.2-1
   * `2016-08-24 19:21:59` **zsh-completions** 0.19.0-2

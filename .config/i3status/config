@@ -16,7 +16,7 @@ order += "disk /"
 order += "wireless wlp3s0"
 order += "battery 0"
 order += "cpu_usage"
-#order += "volume master"
+order += "volume master"
 order += "tztime local"
 
 # Disk space left on my single partition.
@@ -41,11 +41,11 @@ cpu_usage {
 }
 
 # Current volume as a percentage, or "Mut" if muted.
-#volume master {
-#  format = "♪ %volume"
-#  format_muted = "♪ Mut"
-#  device = "default"
-#}
+volume master {
+  format = " ♪ %volume "
+  format_muted = " ♪ Mut "
+  device = "default"
+}
 
 # The current date and time, in "1:23pm" format.
 tztime local {

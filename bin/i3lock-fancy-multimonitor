@@ -56,7 +56,7 @@ i3lock -i $OUTPUT_IMAGE -t -r \
   --textcolor=202020ff \
   --separatorcolor=00000000 \
   --keyhlcolor=cce287ff \
-  --bshlcolor=cce287ff
+  --bshlcolor=cce287ff && systemctl suspend
 
 #Remove the generated image:
 rm $OUTPUT_IMAGE

@@ -12,6 +12,12 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym XF86KbdBrightnessUp exec kbdlight up
 bindsym XF86KbdBrightnessDown exec kbdlight down
 
+# Hook up audio keys to `amixer`.
+# Also send the USR1 signal to update the i3status bar with the new volume.
+bindsym XF86AudioMute        exec amixer set Master toggle && killall -USR1 i3status
+bindsym XF86AudioLowerVolume exec amixer set Master 5%- && killall -USR1 i3status
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ && killall -USR1 i3status
+
 # Lock screen.
 bindsym XF86PowerOff exec i3lock-fancy-multimonitor
 
@@ -21,6 +27,9 @@ bindsym $mod+equal exec xrandr --output HDMI2 --auto --right-of eDP1
 
 # Start `firefox` web browser (mnemonic: it's also the `<` key, indicating HTML).
 bindsym $mod+comma exec firefox
+
+# Start `zathura` pdf viewer.
+bindsym $mod+z exec zathura
 
 # Use mouse+$mod to drag floating windows.
 floating_modifier $mod
