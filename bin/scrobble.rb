@@ -2,6 +2,8 @@
 
 # Super simple last.fm scrobbler / now-playing-updater.
 #
+# Dependencies: $ gem install rockstar
+#
 # Uses a config file at $HOME/.config/lastfm.yml to store an API key, shared
 # secret, and session key. Run `scrobble.rb setup` to setup this config file.
 #
