@@ -21,6 +21,7 @@ call vundle#begin()
   Plugin 'cespare/vim-toml'
   Plugin 'plasticboy/vim-markdown'
   Plugin 'kchmck/vim-coffee-script'
+  Plugin 'octol/vim-cpp-enhanced-highlight'
   Plugin 'file:///home/jeremy/projects/lumb/vim-lumb'
 call vundle#end()
 

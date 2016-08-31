@@ -34,6 +34,17 @@ function scrobble()
                   scrobble_at))
 end
 
+function nowplaying()
+  mp.resume_all()
+
+  msg.info(string.format("Now Playing %s - %s", artist, title))
+
+  os.execute(
+    string.format("scrobble.rb nowplaying '%s' '%s' 0",
+                  esc(artist),
+                  esc(title)))
+end
+
 function enqueue()
   mp.resume_all()
 
@@ -44,10 +55,8 @@ function enqueue()
     if tim then tim.kill(tim) end
     tim = mp.add_timeout(scrobble_at, scrobble)
 
-    os.execute(
-      string.format("scrobble.rb nowplaying '%s' '%s' 0",
-                    esc(artist),
-                    esc(title)))
+    if tim2 then tim2.kill(tim2) end
+    tim2 = mp.add_timeout(5, nowplaying)
   end
 end
 

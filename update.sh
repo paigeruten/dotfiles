@@ -5,7 +5,7 @@ mkdir -p bin .config/{i3,i3status,termite,zathura,mpv/scripts}
 
 # Copy the dotfiles.
 cp ~/.{dircolors,gitconfig,tmux.conf,vimrc,xinitrc,Xresources,zprofile,zshrc} .
-cp ~/bin/* bin/
+cp ~/bin/{i3lock-fancy-multimonitor,lock.png,scrobble.rb} bin/
 cp ~/.config/i3/config .config/i3/config
 cp ~/.config/i3/mychalk .config/i3/mychalk
 cp ~/.config/i3status/config .config/i3status/config

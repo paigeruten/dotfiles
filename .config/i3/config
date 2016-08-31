@@ -7,10 +7,17 @@ font pango:Fira Mono 9
 # Hook up backlight brightness keys to `xbacklight`.
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym $mod+x exec xbacklight -set 1 && kbdlight off
+bindsym $mod+c exec xbacklight -set 100
 
 # Hook up keyboard brightness keys to `kbdlight`.
 bindsym XF86KbdBrightnessUp exec kbdlight up
 bindsym XF86KbdBrightnessDown exec kbdlight down
+
+# Hook up media keys to `mpvctl`.
+bindsym XF86AudioPrev exec mpvctl previous
+bindsym XF86AudioPlay exec mpvctl play-pause
+bindsym XF86AudioNext exec mpvctl next
 
 # Hook up audio keys to `amixer`.
 # Also send the USR1 signal to update the i3status bar with the new volume.

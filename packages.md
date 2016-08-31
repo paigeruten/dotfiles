@@ -1,18 +1,16 @@
 # Arch Linux Packages
 
-I currently have `445` packages installed:
+I currently have `442` packages installed:
 
   * `75` packages are in the `base` or `base-devel` groups.
-  * `49` non-base packages were explicitly installed by me.
+  * `48` non-base packages were explicitly installed by me.
     * `6` of these are from the [AUR](https://aur.archlinux.org).
-  * `321` packages were installed as dependencies to other packages.
+  * `319` packages were installed as dependencies to other packages.
 
 ## Explicitly installed packages
 
   * `adobe-source-han-sans-otc-fonts` Adobe Source Han Sans - Pan-CJK OpenType/CFF Collection fonts
   * `alsa-utils` An alternative implementation of Linux sound support
-  * `boost` Free peer-reviewed portable C++ source libraries - development headers
-  * `cmake` A cross-platform open-source make system
   * `dialog` A tool to display dialog boxes from shell scripts
   * `dmenu` A generic menu for X
   * `efibootmgr` Tool to modify UEFI Firmware Boot Manager Variables
@@ -43,6 +41,7 @@ I currently have `445` packages installed:
   * `polkit` Application development toolkit for controlling system-wide privileges
   * `ruby` An object-oriented language for quick and easy programming
   * `scrot` A simple command-line screenshot utility for X
+  * `socat` Multipurpose relay
   * `termite` A simple VTE-based terminal
   * `tmux` A terminal multiplexer
   * `ttf-fira-mono` Mozilla's monospace typeface designed for Firefox OS
@@ -91,8 +90,6 @@ I currently have `445` packages installed:
   * `2016-08-22 22:28:16` **bash** 4.3.046-1
   * `2016-08-22 22:28:36` **binutils** 2.27-1
   * `2016-08-22 22:28:36` **bison** 3.0.4-2
-  * `2016-08-25 14:25:16` **boost** 1.60.0-5
-  * `2016-08-25 14:25:15` **boost-libs** 1.60.0-5
   * `2016-08-25 21:59:28` **broadcom-wl** 6.30.223.271-3
   * `2016-08-22 22:28:16` **bzip2** 1.0.6-5
   * `2016-08-22 22:28:35` **ca-certificates** 20160507-1
@@ -101,7 +98,6 @@ I currently have `445` packages installed:
   * `2016-08-22 22:28:35` **ca-certificates-utils** 20160507-1
   * `2016-08-24 05:26:41` **cairo** 1.14.6-2
   * `2016-08-28 19:20:07` **cifs-utils** 6.5-1
-  * `2016-08-25 14:23:51` **cmake** 3.6.1-1
   * `2016-08-24 05:50:04` **colord** 1.3.2-2
   * `2016-08-24 05:50:04` **compositeproto** 0.4.2-3
   * `2016-08-24 05:26:41` **confuse** 2.8-2
@@ -205,7 +201,6 @@ I currently have `445` packages installed:
   * `2016-08-23 00:02:38` **js17** 17.0.0-3
   * `2016-08-24 05:26:41` **json-c** 0.12.1-1
   * `2016-08-24 05:50:05` **json-glib** 1.2.2-1
-  * `2016-08-25 14:23:51` **jsoncpp** 1.7.4-1
   * `2016-08-22 22:28:18` **kbd** 2.0.3-1
   * `2016-08-24 21:32:51` **kbdlight** 1.3-1
   * `2016-08-23 00:55:36` **kbproto** 1.0.7-1
@@ -430,6 +425,7 @@ I currently have `445` packages installed:
   * `2016-08-22 22:28:18` **shadow** 4.2.1-3
   * `2016-08-24 05:50:04` **shared-mime-info** 1.6-2
   * `2016-08-28 19:20:09` **smbclient** 4.4.5-1
+  * `2016-08-29 03:53:25` **socat** 1.7.3.1-2
   * `2016-08-24 07:03:17` **speex** 1.2rc2-1
   * `2016-08-24 07:03:17` **speexdsp** 1.2rc3-2
   * `2016-08-22 22:28:35` **sqlite** 3.14.1-1

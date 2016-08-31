@@ -27,6 +27,10 @@ PROMPT="%{$fg_bold[green]%}[%n@%m %{$fg_no_bold[red]%}%2c%{$fg_bold[green]%}]$ %
 # Show exit status (if non-zero), date, and time on right hand side
 RPROMPT="%(?..%{$fg_bold[red]%}[%?]%{$reset_color%}%b  )%{$fg[yellow]%}20%D %t%{$reset_color%}%b"
 
+# Start mpv with --input-ipc-server so mpvctl can control it.
+# Also pass --no-audio-display so it doesn't open album arts in new windows.
+alias mpv="mpv --no-audio-display --input-ipc-server=$HOME/.mpv/socket"
+
 # Fish-style command syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
