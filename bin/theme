@@ -5,15 +5,20 @@ theme=$1
 if [ "$theme" = "light" ]; then
   x_bg="d0d0d0"
   tmux_bg="e0e0e0"
+  dmenu_bg="f5f5f5"
+  dmenu_fg="151515"
 elif [ "$theme" = "dark" ]; then
   x_bg="303030"
   tmux_bg="202020"
+  dmenu_bg="151515"
+  dmenu_fg="f5f5f5"
 else
   echo "Usage: $0 <light|dark>"
 fi
 
 sed -i "s/^xsetroot -solid '#[0-9a-f]\+'$/xsetroot -solid '#$x_bg'/" $HOME/.xinitrc
 sed -i "s/^set-option -g status-bg \"#[0-9a-f]\+\"$/set-option -g status-bg \"#$tmux_bg\"/" $HOME/.tmux.conf
+sed -i "s/dmenu_run -nb '#[0-9a-f]\+' -nf '#[0-9a-f]\+' -sb '#[0-9a-f]\+'/dmenu_run -nb '#$dmenu_bg' -nf '#$dmenu_fg' -sb '#$dmenu_bg'/" $HOME/.config/i3/config
 cp $HOME/.config/termite/config.$theme $HOME/.config/termite/config
 cp $HOME/.config/zathura/zathurarc.$theme $HOME/.config/zathura/zathurarc
 i3-style $HOME/.config/i3/mychalk.$theme -sr

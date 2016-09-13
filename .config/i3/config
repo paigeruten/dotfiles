@@ -60,7 +60,7 @@ workspace 10 output HDMI2
 bindsym $mod+Shift+q kill
 
 # Start `dmenu` (a program launcher).
-bindsym $mod+d exec dmenu_run -nb '#151515' -nf '#f5f5f5' -sb '#151515' -sf '#acc267' -fn 'Fira Mono-13'
+bindsym $mod+d exec dmenu_run -nb '#f5f5f5' -nf '#151515' -sb '#f5f5f5' -sf '#acc267' -fn 'Fira Mono-13'
 
 # Change focus.
 bindsym $mod+j focus left
