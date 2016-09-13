@@ -9,6 +9,9 @@
 
 local msg = require 'mp.msg'
 
+-- only files with these extensions will be scrobbled
+local audio_exts = { mp3=true, ogg=true, m4a=true }
+
 function mkmetatable()
   local m = {}
   for i = 0, mp.get_property("metadata/list/count") - 1 do
@@ -62,16 +65,39 @@ end
 
 function on_metadata()
   local m = mkmetatable()
+  local icy = m["icy-title"]
 
-  length = mp.get_property("duration")
+  if icy then
+    -- Only works for WFMU
+    new_title, new_artist = string.match(icy, "^\"(.+)\" by (.+) on WFMU on .+$")
 
-  -- last.fm doesn't allow scrobbling short tracks
-  if length and tonumber(length) < 30 then
-    return
+    -- Make sure not to scrobble duplicates
+    if title and artist and new_title == title and new_artist == artist then
+      return
+    end
+    if new_title and new_artist then
+      title, artist = new_title, new_artist
+    end
+    length = nil
+  else
+    local filename = mp.get_property("filename")
+    length = mp.get_property("duration")
+
+    -- make sure it is an audio file
+    ext = string.sub(filename, -4, -1)
+    ext = filename:match("%.(.+)$")
+    if not audio_exts[ext] then
+      return
+    end
+
+    -- don't scrobble short tracks
+    if length and tonumber(length) < 30 then
+      return
+    end
+
+    artist = m["artist"] or m["ARTIST"]
+    title = m["title"] or m["TITLE"]
   end
-
-  artist = m["artist"] or m["ARTIST"]
-  title = m["title"] or m["TITLE"]
 
   enqueue()
 end

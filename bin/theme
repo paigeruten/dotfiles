@@ -1,0 +1,22 @@
+#!/bin/sh
+
+theme=$1
+
+if [ "$theme" = "light" ]; then
+  x_bg="d0d0d0"
+  tmux_bg="e0e0e0"
+elif [ "$theme" = "dark" ]; then
+  x_bg="303030"
+  tmux_bg="202020"
+else
+  echo "Usage: $0 <light|dark>"
+fi
+
+sed -i "s/^xsetroot -solid '#[0-9a-f]\+'$/xsetroot -solid '#$x_bg'/" $HOME/.xinitrc
+sed -i "s/^set-option -g status-bg \"#[0-9a-f]\+\"$/set-option -g status-bg \"#$tmux_bg\"/" $HOME/.tmux.conf
+cp $HOME/.config/termite/config.$theme $HOME/.config/termite/config
+cp $HOME/.config/zathura/zathurarc.$theme $HOME/.config/zathura/zathurarc
+i3-style $HOME/.config/i3/mychalk.$theme -sr
+
+xsetroot -solid "#$x_bg"
+tmux source-file $HOME/.tmux.conf
