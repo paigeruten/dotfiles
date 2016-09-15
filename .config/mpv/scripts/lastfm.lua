@@ -77,6 +77,8 @@ function on_metadata()
     end
     if new_title and new_artist then
       title, artist = new_title, new_artist
+    else
+      return
     end
     length = nil
   else
@@ -85,7 +87,7 @@ function on_metadata()
 
     -- make sure it is an audio file
     ext = string.sub(filename, -4, -1)
-    ext = filename:match("%.(.+)$")
+    ext = filename:match("%.([^.]+)$")
     if not audio_exts[ext] then
       return
     end

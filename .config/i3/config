@@ -15,9 +15,9 @@ bindsym XF86KbdBrightnessUp exec kbdlight up
 bindsym XF86KbdBrightnessDown exec kbdlight down
 
 # Hook up media keys to `mpvctl`.
-bindsym XF86AudioPrev exec mpvctl previous
-bindsym XF86AudioPlay exec mpvctl play-pause
-bindsym XF86AudioNext exec mpvctl next
+bindsym XF86AudioPrev exec mpvctl previous || playerctl previous
+bindsym XF86AudioPlay exec mpvctl play-pause || playerctl play-pause
+bindsym XF86AudioNext exec mpvctl next || playerctl next
 
 # Hook up audio keys to `amixer`.
 # Also send the USR1 signal to update the i3status bar with the new volume.
