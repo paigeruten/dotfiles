@@ -1,11 +1,11 @@
 # Arch Linux Packages
 
-I currently have `457` packages installed:
+I currently have `460` packages installed:
 
   * `75` packages are in the `base` or `base-devel` groups.
   * `50` non-base packages were explicitly installed by me.
-    * `7` of these are from the [AUR](https://aur.archlinux.org).
-  * `332` packages were installed as dependencies to other packages.
+    * `8` of these are from the [AUR](https://aur.archlinux.org).
+  * `335` packages were installed as dependencies to other packages.
 
 ## Explicitly installed packages
 
@@ -33,10 +33,8 @@ I currently have `457` packages installed:
   * `lxappearance` Feature-rich GTK+ theme switcher of the LXDE Desktop
   * `mlocate` Merging locate/updatedb implementation
   * `mpv` a free, open source, and cross-platform media player
-  * `nodejs` Evented I/O for V8 javascript
   * `noto-fonts` Google Noto TTF fonts
   * `noto-fonts-emoji` Google Noto emoji fonts
-  * `npm` A package manager for javascript
   * `openssh` Free version of the SSH connectivity tools
   * `pass` Stores, retrieves, generates, and synchronizes passwords securely
   * `pkgfile` a pacman .files metadata explorer
@@ -44,6 +42,7 @@ I currently have `457` packages installed:
   * `ruby` An object-oriented language for quick and easy programming
   * `scrot` A simple command-line screenshot utility for X
   * `socat` Multipurpose relay
+  * `strace` A useful diagnositic, instructional, and debugging tool
   * `termite` A simple VTE-based terminal
   * `tmux` A terminal multiplexer
   * `ttf-fira-mono` Mozilla's monospace typeface designed for Firefox OS
@@ -70,6 +69,7 @@ I currently have `457` packages installed:
   * `i3lock-color-git` An improved screenlocker based upon XCB and PAM with color configuration support
   * `kbdlight` A very simple application that changes MacBooks' keyboard backlight level.
   * `lostfiles` Find orphaned files not owned by any Arch packages
+  * `nand2tetris` Software suite accompanying Nand2Tetris course.
   * `playerctl` mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
   * `rustup` The Rust toolchain installer
   * `spotify` A proprietary music streaming service
@@ -93,7 +93,7 @@ I currently have `457` packages installed:
   * `2016-08-22 22:28:16` **bash** 4.3.046-1
   * `2016-09-14 18:42:25` **binutils** 2.27-1
   * `2016-09-14 18:42:25` **bison** 3.0.4-2
-  * `2016-08-25 21:59:28` **broadcom-wl** 6.30.223.271-3
+  * `2016-09-16 18:31:22` **broadcom-wl** 6.30.223.271-3
   * `2016-08-22 22:28:16` **bzip2** 1.0.6-5
   * `2016-08-22 22:28:35` **ca-certificates** 20160507-1
   * `2016-08-22 22:28:35` **ca-certificates-cacert** 20140824-3
@@ -107,7 +107,7 @@ I currently have `457` packages installed:
   * `2016-08-22 22:28:17` **coreutils** 8.25-2
   * `2016-08-22 22:28:17` **cracklib** 2.9.6-1
   * `2016-08-22 22:28:19` **cryptsetup** 1.7.2-1
-  * `2016-09-14 19:05:08` **curl** 7.50.2-1
+  * `2016-09-16 18:30:27` **curl** 7.50.3-1
   * `2016-08-24 05:06:57` **damageproto** 1.2.1-3
   * `2016-08-22 22:28:16` **db** 5.3.28-3
   * `2016-09-03 04:48:18` **dbus** 1.10.10-3
@@ -186,7 +186,7 @@ I currently have `457` packages installed:
   * `2016-08-24 05:50:04` **hicolor-icon-theme** 0.15-1
   * `2016-08-24 22:33:33` **http-parser** 2.7.1-1
   * `2016-08-24 07:03:18` **hunspell** 1.4.1-1
-  * `2016-08-22 22:28:18` **hwids** 20160421-1
+  * `2016-09-16 18:30:27` **hwids** 20160801-1
   * `2016-08-24 05:26:41` **i3-wm** 4.12-1
   * `2016-08-25 01:56:42` **i3lock-color-git** r255.1ebdc36-1
   * `2016-08-24 05:26:41` **i3status** 2.10-1
@@ -202,8 +202,11 @@ I currently have `457` packages installed:
   * `2016-08-22 22:44:45` **iw** 4.7-1
   * `2016-08-28 19:20:07` **jack** 0.124.1-6
   * `2016-08-24 05:50:04` **jasper** 1.900.1-15
+  * `2016-09-15 23:50:27` **java-runtime-common** 2-2
   * `2016-08-25 17:41:38` **jbig2dec** 0.12-1
   * `2016-08-22 22:28:19` **jfsutils** 1.1.15-4
+  * `2016-09-15 23:50:29` **jre8-openjdk** 8.u102-1
+  * `2016-09-15 23:50:29` **jre8-openjdk-headless** 8.u102-1
   * `2016-08-23 00:02:38` **js17** 17.0.0-3
   * `2016-08-24 05:26:41` **json-c** 0.12.1-1
   * `2016-08-24 05:50:05` **json-glib** 1.2.2-1
@@ -339,10 +342,10 @@ I currently have `457` packages installed:
   * `2016-08-24 05:06:57` **libxxf86vm** 1.1.4-1
   * `2016-09-03 04:48:19` **libyaml** 0.1.7-1
   * `2016-08-22 22:28:19` **licenses** 20140629-1
-  * `2016-08-25 21:56:48` **linux** 4.7.2-1
+  * `2016-09-16 18:30:31` **linux** 4.7.4-1
   * `2016-08-22 22:28:13` **linux-api-headers** 4.7-1
   * `2016-08-22 22:28:22` **linux-firmware** 20160730.6bc2c60-1
-  * `2016-08-25 21:56:58` **linux-headers** 4.7.2-1
+  * `2016-09-16 18:30:40` **linux-headers** 4.7.4-1
   * `2016-08-24 05:06:58` **llvm-libs** 3.8.1-1
   * `2016-08-22 22:28:34` **logrotate** 3.9.2-1
   * `2016-08-25 22:00:25` **lostfiles** 3.25-1
@@ -356,8 +359,8 @@ I currently have `457` packages installed:
   * `2016-09-03 04:48:19` **man-db** 2.7.5-4
   * `2016-08-22 22:28:35` **man-pages** 4.07-1
   * `2016-08-22 22:28:35` **mdadm** 3.4-1
-  * `2016-09-06 23:19:47` **mesa** 12.0.2-1
-  * `2016-09-06 23:19:47` **mesa-libgl** 12.0.2-1
+  * `2016-09-16 18:30:41` **mesa** 12.0.3-1
+  * `2016-09-16 18:30:41` **mesa-libgl** 12.0.3-1
   * `2016-08-24 07:03:16` **mime-types** 9-1
   * `2016-09-14 19:05:09` **mkinitcpio** 21-1
   * `2016-08-22 22:28:22` **mkinitcpio-busybox** 1.24.2-1
@@ -366,15 +369,14 @@ I currently have `457` packages installed:
   * `2016-08-22 22:28:19` **mpfr** 3.1.4.p1-1
   * `2016-09-03 04:48:20` **mpv** 1:0.20.0-1
   * `2016-08-24 05:06:59` **mtdev** 1.1.5-1
+  * `2016-09-15 23:53:17` **nand2tetris** 2.5-8
   * `2016-09-06 23:19:47` **nano** 2.7.0-1
   * `2016-08-22 22:28:15` **ncurses** 6.0-4
   * `2016-08-24 07:03:16` **netcdf** 4.4.1rc1-1
   * `2016-08-22 22:28:35` **netctl** 1.12-2
   * `2016-08-22 22:28:35` **nettle** 3.2-2
-  * `2016-09-03 04:48:20` **nodejs** 6.5.0-1
   * `2016-08-25 20:45:12` **noto-fonts** 20160613-1
   * `2016-08-25 20:45:12` **noto-fonts-emoji** 20160714-1
-  * `2016-09-09 22:04:35` **npm** 3.10.7-1
   * `2016-08-22 22:28:35` **npth** 1.2-1
   * `2016-08-22 23:47:55` **nspr** 4.12-1
   * `2016-08-24 07:03:18` **nss** 3.26-1
@@ -399,7 +401,7 @@ I currently have `457` packages installed:
   * `2016-08-22 22:28:36` **pcmciautils** 018-7
   * `2016-08-22 22:28:19` **pcre** 8.39-1
   * `2016-08-24 05:50:06` **pcre2** 10.22-1
-  * `2016-08-22 22:28:17` **perl** 5.24.0-1
+  * `2016-09-16 18:30:27` **perl** 5.24.0-2
   * `2016-08-23 00:56:10` **perl-error** 0.17024-1
   * `2016-08-22 22:28:35` **pinentry** 0.9.7-2
   * `2016-08-24 05:06:54` **pixman** 0.34.0-1
@@ -438,16 +440,16 @@ I currently have `457` packages installed:
   * `2016-08-25 21:31:41` **scrot** 0.8.13-1
   * `2016-08-24 07:03:17` **sdl** 1.2.15-7
   * `2016-09-14 18:42:25` **sed** 4.2.2-4
-  * `2016-08-24 22:37:00` **semver** 5.3.0-1
   * `2016-08-22 22:28:18` **shadow** 4.2.1-3
-  * `2016-08-24 05:50:04` **shared-mime-info** 1.6-2
+  * `2016-09-16 18:30:41` **shared-mime-info** 1.7-1
   * `2016-09-14 19:05:09` **smbclient** 4.5.0-2
   * `2016-08-29 03:53:25` **socat** 1.7.3.1-2
   * `2016-08-24 07:03:17` **speex** 1.2rc2-1
   * `2016-08-24 07:03:17` **speexdsp** 1.2rc3-2
   * `2016-09-14 18:56:01` **spotify** 1.0.37.152-1
-  * `2016-08-22 22:28:35` **sqlite** 3.14.1-1
+  * `2016-09-16 18:30:41` **sqlite** 3.14.2-1
   * `2016-08-24 05:26:41` **startup-notification** 0.12-4
+  * `2016-09-16 22:01:59` **strace** 4.13-1
   * `2016-09-14 18:42:28` **sudo** 1.8.17.p1-1
   * `2016-08-22 22:28:19` **sysfsutils** 2.1.0-9
   * `2016-08-22 22:28:19` **systemd** 231-1
@@ -466,6 +468,7 @@ I currently have `457` packages installed:
   * `2016-08-25 03:13:55` **ttf-fira-mono** 2:3.206-1
   * `2016-08-25 20:44:48` **ttf-liberation** 2.00.1-6
   * `2016-08-22 22:28:13` **tzdata** 2016f-1
+  * `2016-09-15 23:50:50` **unzip** 6.0-12
   * `2016-08-22 22:28:36` **usbutils** 008-1
   * `2016-09-14 18:42:25` **util-linux** 2.28.2-1
   * `2016-08-24 07:03:17` **v4l-utils** 1.10.1-1
@@ -493,7 +496,7 @@ I currently have `457` packages installed:
   * `2016-09-14 19:05:09` **xclip** 0.13-1
   * `2016-08-25 16:23:23` **xdg-utils** 1.1.1-4
   * `2016-08-23 00:55:36` **xextproto** 7.3.0-1
-  * `2016-08-24 05:06:59` **xf86-input-libinput** 0.19.0-1
+  * `2016-09-16 18:30:41` **xf86-input-libinput** 0.19.1-1
   * `2016-09-14 19:05:09` **xf86-video-intel** 1:2.99.917+703+g15c5ff1-1
   * `2016-08-24 15:47:01` **xf86dgaproto** 2.1-3
   * `2016-08-24 05:06:57` **xf86vidmodeproto** 2.3.1-3

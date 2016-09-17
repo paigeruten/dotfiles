@@ -34,6 +34,7 @@ bindsym $mod+equal exec xrandr --output HDMI2 --auto --right-of eDP1
 
 # Start `firefox` web browser (mnemonic: it's also the `<` key, indicating HTML).
 bindsym $mod+comma exec firefox
+bindsym $mod+Shift+comma exec firefox -P pencilcode
 
 # Start `zathura` pdf viewer.
 bindsym $mod+z exec zathura

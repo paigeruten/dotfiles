@@ -38,3 +38,8 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # provide that command.
 source /usr/share/doc/pkgfile/command-not-found.zsh
 
+# Load nvm (Node Version Manager).
+export NVM_DIR="/home/jeremy/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use
+path=("$NVM_DIR/versions/node/v6.6.0/bin" $path[@])
+

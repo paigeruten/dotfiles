@@ -1,4 +1,5 @@
 set font "Fira Mono 11"
+map <Space> navigate next
 
 # Default foreground and background colours.
 set default-bg "#151515" #07

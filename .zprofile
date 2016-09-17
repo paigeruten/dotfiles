@@ -1,8 +1,5 @@
 typeset -U path
 
-# npm
-path=(~/.node_modules/bin $path[@])
-
 # rubygems
 export GEM_HOME=$(ruby -rubygems -e 'puts Gem.user_dir')
 path=($GEM_HOME/bin $path[@])
