@@ -1,22 +1,7 @@
 #!/bin/bash
 
-# Make sure directories exist.
-mkdir -p bin .config/{i3,i3status,termite,zathura,mpv/scripts}
-
 # Copy the dotfiles.
-cp ~/.{dircolors,gitconfig,tmux.conf,vimrc,xinitrc,Xresources,zprofile,zshrc} .
-cp ~/bin/{i3lock-fancy-multimonitor,lock.png,scrobble.rb,theme} bin/
-cp ~/.config/i3/config .config/i3/config
-cp ~/.config/i3/mychalk.light .config/i3/mychalk.light
-cp ~/.config/i3/mychalk.dark .config/i3/mychalk.dark
-cp ~/.config/i3status/config .config/i3status/config
-cp ~/.config/termite/config .config/termite/config
-cp ~/.config/termite/config.light .config/termite/config.light
-cp ~/.config/termite/config.dark .config/termite/config.dark
-cp ~/.config/zathura/zathurarc .config/zathura/zathurarc
-cp ~/.config/zathura/zathurarc.light .config/zathura/zathurarc.light
-cp ~/.config/zathura/zathurarc.dark .config/zathura/zathurarc.dark
-cp ~/.config/mpv/scripts/lastfm.lua .config/mpv/scripts/lastfm.lua
+cp ~/.{gitconfig,tmux.conf,vimrc,zprofile,zshrc} .
 
 # Package stats.
 num_pkgs=$(pacman -Qq | wc -l)

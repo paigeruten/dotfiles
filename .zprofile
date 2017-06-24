@@ -1,12 +1,10 @@
 typeset -U path
 
-# rubygems
-export GEM_HOME=$(ruby -rubygems -e 'puts Gem.user_dir')
-path=($GEM_HOME/bin $path[@])
-
 # ~/bin
 path=(~/bin $path[@])
 
-# Select the default sound card (by default it's HDMI...)
-export ALSA_CARD=PCH
+# rubygems
+path=("$(ruby -e 'print Gem.user_dir')/bin" $path[@])
 
+# Select default sound card (otherwise it selects HDMI)
+ALSA_CARD=PCH

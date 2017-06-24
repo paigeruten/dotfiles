@@ -13,4 +13,18 @@
 	co = checkout
 	br = branch
 	ci = commit
+	cia = commit --amend
 	st = status
+	logs = log --format='%h %Cblue%s'
+	rb = rebase
+	rbi = rebase -i
+	rbr = rebase -i --root
+	rbc = rebase --continue
+	rbe = rebase --edit-todo
+	bs = bisect
+	bss = bisect start
+	bsg = bisect good
+	bsb = bisect bad
+	bsr = bisect reset
+[diff]
+	algorithm = histogram
