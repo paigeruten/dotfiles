@@ -1,0 +1,10 @@
+[
+	/* SUBLIME SIX (VIM MODE) KEYBINDINGS {{{ */
+		/* type "jk" in insert mode to escape */
+		{ "keys": ["j", "k"], "command": "six_press_key", "args": { "key": "<Esc>" }, "context": [{ "key": "six_is_in_insert_mode" }] },
+
+		/* Ctrl+D and Ctrl+U to scroll */
+		{ "keys": ["ctrl+u"], "command": "scroll_lines", "args": {"amount": 20.0} },
+		{ "keys": ["ctrl+d"], "command": "scroll_lines", "args": {"amount": -20.0} },
+	/* }}} */
+]
