@@ -1,14 +1,11 @@
 [
-	/* SUBLIME SIX (VIM MODE) KEYBINDINGS {{{ */
-		/* type "jk" in insert mode to escape */
-		{ "keys": ["j", "k"], "command": "six_press_key", "args": { "key": "<Esc>" }, "context": [{ "key": "six_is_in_insert_mode" }] },
-
-		/* Ctrl+D and Ctrl+U to scroll */
-		{ "keys": ["ctrl+d"], "command": "scroll_lines", "args": {"amount": -20.0} },
-		{ "keys": ["ctrl+u"], "command": "scroll_lines", "args": {"amount": 20.0} },
-
-		/* Ctrl+E and Ctrl+Y to scroll line by line */
-		{ "keys": ["ctrl+e"], "command": "scroll_lines", "args": {"amount": -1.0} },
-		{ "keys": ["ctrl+y"], "command": "scroll_lines", "args": {"amount": 1.0} },
-	/* }}} */
+	{
+	    "keys": ["j", "k"],
+	    "command": "exit_insert_mode",
+	    "context":
+	    [
+	        { "key": "setting.command_mode", "operand": false },
+	        { "key": "setting.is_widget", "operand": false }
+	    ]
+    }
 ]
