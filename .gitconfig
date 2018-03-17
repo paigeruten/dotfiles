@@ -9,11 +9,13 @@
 	default = simple
 [core]
 	editor = /usr/bin/vim
+	excludesfile = /Users/jeremy/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [alias]
 	co = checkout
 	br = branch
-	ci = commit
-	cia = commit --amend
+	ci = commit --cleanup=scissors
+	cia = commit --amend --cleanup=scissors
 	st = status
 	logs = log --format='%h %Cblue%s'
 	rb = rebase
@@ -26,5 +28,3 @@
 	bsg = bisect good
 	bsb = bisect bad
 	bsr = bisect reset
-[diff]
-	algorithm = histogram
