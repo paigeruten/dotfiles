@@ -75,6 +75,9 @@ nnoremap <leader>y :BTags<cr>
 nnoremap <leader>b :Commits<cr>
 nnoremap <leader>h :BCommits<cr>
 
+" allow a hidden tags file
+let g:gutentags_ctags_tagfile='.tags'
+
 " remove all trailing whitespace (plugin)
 nnoremap <leader><space> :StripWhitespace<cr>
 
@@ -89,10 +92,10 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " --- Color schemes {
 
 " Colorful, dark scheme
-"color minimalist
+color minimalist
 
 " More minimal color scheme
-color paramount
+"color paramount
 
 " Colorless color scheme
 "let g:nofrils_strbackgrounds=1
