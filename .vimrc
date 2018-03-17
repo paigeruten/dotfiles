@@ -1,36 +1,24 @@
-" required by Vundle
-set nocompatible
-filetype off
+call plug#begin('~/.vim/plugged')
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-  Plugin 'VundleVim/Vundle.vim'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-sleuth'
+Plug 'ntpeters/vim-better-whitespace'
 
-  " fuzzy file finder
-  Plugin 'ctrlpvim/ctrlp.vim'
+" Syntax
+Plug 'sheerun/vim-polyglot'
+Plug 'mxw/vim-jsx'
 
-  " better status line
-  Plugin 'itchyny/lightline.vim'
+" Color schemes
+Plug 'dikiaap/minimalist'
+Plug 'owickstrom/vim-colors-paramount'
+Plug 'robertmeta/nofrils'
 
-  " figures out what type of indentation to use
-  Plugin 'tpope/vim-sleuth'
-
-  " highlights extraneous whitespace and helps you remove it
-  Plugin 'ntpeters/vim-better-whitespace'
-
-  " plugins for writing prose
-  Plugin 'reedes/vim-pencil'
-  Plugin 'junegunn/goyo.vim'
-  Plugin 'junegunn/limelight.vim'
-
-  " language plugins
-  Plugin 'plasticboy/vim-markdown'
-  Plugin 'octol/vim-cpp-enhanced-highlight'
-call vundle#end()
-
-" required by Vundle
-filetype plugin indent on
+call plug#end()
 
 syntax on              " syntax highlighting
 set number             " line numbers
@@ -42,9 +30,12 @@ set autoindent         " simple auto indent
 set laststatus=2       " always show status line
 set foldlevelstart=99  " open all folds by default
 set backspace=2        " allow backspace
+set clipboard=unnamed  " use system copy+paste
+set mouse=a            " mouse mode
 
 " I try to keep comments 80 chars wide, and code never more than 100
 set colorcolumn=80,100
+highlight ColorColumn ctermbg=8
 
 " leader keys
 let mapleader = ","
@@ -64,13 +55,49 @@ noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
 
+" store annoying dotfiles in the ~/.vim directory
+set undodir=~/.vim/.undo//
+set backupdir=~/.vim/.backup//
+set directory=~/.vim/.swp//
+
+" fzf
+nnoremap <leader>, :FZF<cr>
+nnoremap <leader>m :Buffers<cr>
+nnoremap <leader>f :Files<cr>
+nnoremap <leader>g :GFiles<cr>
+nnoremap <leader>d :GFiles?<cr>
+nnoremap <leader>s :Ag<cr>
+nnoremap <leader>l :Lines<cr>
+nnoremap <leader>c :BLines<cr>
+nnoremap <leader>t :Tags<cr>
+nnoremap <leader>y :BTags<cr>
+nnoremap <leader>b :Commits<cr>
+nnoremap <leader>h :BCommits<cr>
+
 " remove all trailing whitespace (plugin)
 nnoremap <leader><space> :StripWhitespace<cr>
+
+" nerdtree
+nnoremap <leader>. :NERDTree<cr>
+let g:NERDTreeMouseMode=3
 
 " quickly edit and source this vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-" limelight.vim options
-let g:limelight_conceal_ctermfg = 240
+" --- Color schemes {
+
+" Colorful, dark scheme
+"color minimalist
+
+" More minimal color scheme
+color paramount
+
+" Colorless color scheme
+"let g:nofrils_strbackgrounds=1
+"let g:nofrils_heavycomments=1
+"color nofrils-dark
+"color nofrils-light
+
+" --- }
 
